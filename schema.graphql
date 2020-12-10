@@ -1,5 +1,5 @@
 type OwnershipTransferred @entity {
-  "This entity represents Owner"
+  "This entity allows the current owner to transfer control of the contract to a newOwner"
   id: ID!
   _owner: Bytes! 
   "Owner address"
@@ -7,7 +7,7 @@ type OwnershipTransferred @entity {
   proxyowner: Bytes!
 }
 type Approval @entity {
-  "This entity represents Approval of RootKit user address"
+  "Approve the passed address to spend the specified amount of tokens on behalf of msg.sender"
   id: ID!
   _owner: Bytes! 
   "Owner address"
@@ -16,7 +16,7 @@ type Approval @entity {
   transactionCount: Int!
 }
 type Transfer @entity {
-  "This entity represents Spring Transfer"
+  "This entity represents Spring transfer token for a specified address"
   id: ID!
   "User address"
   address: String!
