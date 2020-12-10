@@ -1,0 +1,28 @@
+type OwnershipTransferred @entity {
+  "This entity represents Owner"
+  id: ID!
+  _owner: Bytes! 
+  "Owner address"
+  address: String!
+  proxyowner: Bytes!
+}
+type Approval @entity {
+  "This entity represents Approval of RootKit user address"
+  id: ID!
+  _owner: Bytes! 
+  "Owner address"
+  address: String!
+  "User transaction"
+  transactionCount: Int!
+}
+type Transfer @entity {
+  "This entity represents Spring Transfer"
+  id: ID!
+  "User address"
+  address: String!
+  value: BigInt!
+}
+type ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+}

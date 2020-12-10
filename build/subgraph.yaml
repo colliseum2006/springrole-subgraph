@@ -1,0 +1,35 @@
+specVersion: 0.0.2
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: spring
+    network: mainnet
+    source:
+      address: "0xfb0bdc444c8ae7e9b5beea5e4d1e8de93879e487"
+      abi: spring
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Pause
+        - Unpause
+        - OwnershipTransferred
+        - Approval
+        - Transfer
+      abis:
+        - name: spring
+          file: spring\abis\spring.json
+      eventHandlers:
+        - event: Pause()
+          handler: handlePause
+        - event: Unpause()
+          handler: handleUnpause
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: spring\spring.wasm
