@@ -1,6 +1,7 @@
 # springrole-subgraph
 
 This is the subgraph, a collection of GraphQL schemas and mappings that parse the events broadcast by the SpringRole on the Ethereum blockchain.
+SpringRole is a decentralized attestation based professional network platform powered by the blockchain. SpringRole is the platform where people can view, share and get attestations on their professional profile, thereby creating a verified resume that they can share and use.
 
 Our smart contracts can be found in this repository https://etherscan.io/address/0xfb0bdc444c8ae7e9b5beea5e4d1e8de93879e487#code.
 
